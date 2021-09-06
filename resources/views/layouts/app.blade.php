@@ -48,9 +48,9 @@
                                 <li class="nav-item">
                                     <a href="{{ route('admin.roles.index') }}" class="nav-link">Roles</a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{ route('admin.plans.index') }}" class="nav-link">Plans</a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="{{ route('admin.genres.index') }}" class="nav-link">Genres</a>
                                 </li>
@@ -95,7 +95,7 @@
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                                                                                                     document.getElementById('logout-form').submit();">
+                                                                                                                                                 document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 

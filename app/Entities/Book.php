@@ -13,7 +13,7 @@ class Book extends Model implements HasMedia
     use InteractsWithMedia;
 
     protected $fillable = [
-        'title', 'slug', 'price', 'published_date', 'author_id', 'publish',
+        'title', 'slug', 'isbn', 'price', 'published_date', 'author_id', 'genre_id', 'publish',
     ];
 
     public function getCoverAttribute()

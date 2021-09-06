@@ -30,7 +30,7 @@
                                     <td>{{ $book->price }} credits</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Published Date</strong></td>
+                                    <td><strong>Published</strong></td>
                                     <td>{{ $book->published_date }}</td>
                                 </tr>
                                 <tr>
@@ -49,7 +49,7 @@
                                         @if ($book->publish)
                                             <span class="badge badge-success">Published</span>
                                         @else
-                                            <span class="badge badge-danger">Not Published</span>    
+                                            <span class="badge badge-danger">Not Published</span>
                                         @endif
                                     </td>
                                 </tr>

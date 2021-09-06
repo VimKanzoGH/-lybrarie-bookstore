@@ -38,6 +38,16 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label for="isbn"><strong>ISBN:</strong></label>
+                                <input type="text" class="form-control @error('isbn') is-invalid @enderror" name="isbn"
+                                    id="isbn" required />
+                                @error('isbn')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label for="published_date"><strong>Published Date:</strong></label>
                                 <input type="text" class="form-control @error('published_date') is-invalid @enderror"
                                     name="published_date" id="published_date" required placeholder="19xx" />
@@ -66,7 +76,7 @@
                                 <select name="genre_id" class="form-control" id="genre_id">
                                     <option value="" selected disabled>Pick a genre</option>
                                     @foreach ($genres as $id => $genre)
-                                        <option value="{{ $id }}">{{ $genres }}</option>
+                                        <option value="{{ $id }}">{{ $genre }}</option>
                                     @endforeach
                                 </select>
                                 @error('genre_id')

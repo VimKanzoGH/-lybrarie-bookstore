@@ -21,8 +21,9 @@
                                     <th class="text-center">#</th>
                                     <th>Title</th>
                                     <th class="text-center">Credits</th>
-                                    <th class="text-center">Published Date</th>
+                                    <th class="text-center">Published</th>
                                     <th class="text-center">Author</th>
+                                    <th class="text-center">Genre</th>
                                     <th class="text-center">Status</th>
                                     <th class="text-center">Actions</th>
                                 </tr>
@@ -36,6 +37,7 @@
                                         <td class="text-center">{{ $book->price }}</td>
                                         <td class="text-center">{{ $book->published_date }}</td>
                                         <td class="text-center">{{ $book->author->name }}</td>
+                                        <td class="text-center">{{ $book->genre->name }}</td>
                                         <td class="text-center">
                                             @if ($book->publish)
                                                 <span class="badge badge-success">Published</span>
@@ -46,9 +48,9 @@
                                         <td class="text-center">
                                             <div class="btn-group">
                                                 <a href="{{ route('admin.books.show', $book->id) }}"
-                                                    class="btn btn-info btn-sm">S</a>
+                                                    class="btn btn-info btn-sm">Show</a>
                                                 <a href="{{ route('admin.books.edit', $book->id) }}"
-                                                    class="btn btn-info btn-sm">Edit</a>
+                                                    class="btn btn-warning btn-sm">Edit</a>
                                                 <form action="{{ route('admin.books.destroy', $book->id) }}"
                                                     method="POST">
                                                     @csrf
