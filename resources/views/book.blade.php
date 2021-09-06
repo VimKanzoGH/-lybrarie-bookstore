@@ -8,7 +8,7 @@
             </figure>
         </div>
         <div class="col-md-9">
-            <h1>{{ $book->title }} - <small class="price">${{ $book->price }}</small></h1>
+            <h1>{{ $book->title }} - <small class="price">₵{{ $book->price }}</small></h1>
             <h5>{{ $book->author->name }} - {{ $book->published_date }}</h5>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et

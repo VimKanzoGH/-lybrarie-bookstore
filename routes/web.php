@@ -37,6 +37,9 @@ Route::get('/books/author/{id}', function($slug) {
 Route::view('about', 'about')->name('about');
 Route::view('contact', 'contact')->name('contact');
 
+// Route::get('full-text-search', 'HomeController@index');
+Route::post('search/action', 'HomeController@booksSearch')->name('search_query');
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {

@@ -7,10 +7,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Nicolaslopezj\Searchable\SearchableTrait;
 
 class Book extends Model implements HasMedia
 {
-    use InteractsWithMedia;
+    use InteractsWithMedia, SearchableTrait;
 
     protected $fillable = [
         'title', 'slug', 'isbn', 'blurb', 'price', 'published_date', 'author_id', 'genre_id', 'publish',
@@ -43,4 +44,29 @@ class Book extends Model implements HasMedia
     {
         return $this->belongsTo(User::class);
     }
+
+     /**
+     * Searchable rules.
+     *
+     * @var array
+     */
+    protected $searchable = [
+        /**
+         * Columns and their priority in search results.
+         * Columns with higher values are more important.
+         * Columns with equal values have equal importance.
+         *
+         * @var array
+         */
+        'columns' => [
+            'books.title' => 20,
+            'books.blurb' => 20,
+            'books.isbn' => 15,
+            'books.published_date' => 5,
+        ],
+        'joins' => [
+            // 'authors' => ['books.id','authors.author_id'],
+            // 'genres' => ['books.id','genres.author_id'],
+        ],
+    ];
 }

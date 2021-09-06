@@ -9,12 +9,13 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "ext-gd": "*",
         "fideloper/proxy": "^4.4",
-        "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "ext-gd": "*",
+        "laravel/framework": "^8.12",
+        "laravel/tinker": "^2.5",
+        "nicolaslopezj/searchable": "^1.13",
         "spatie/laravel-medialibrary": "^8.0.0"
     },
     "require-dev": {

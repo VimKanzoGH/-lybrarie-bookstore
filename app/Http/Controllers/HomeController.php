@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Entities\Book;
 use App\Entities\Plan;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -50,5 +51,15 @@ class HomeController extends Controller
         Auth::user()->wallet->update(['credits' => Auth::user()->wallet->credits - $book->price]);
 
         return redirect()->route('library.index');
+    }
+
+    function booksSearch(Request $request)
+    {
+      if($request->ajax())
+      {
+          $searchedData = Book::search($request->get('search_query'))->get();
+
+          return response()->json($searchedData);
+      }
     }
 }

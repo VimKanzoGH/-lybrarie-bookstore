@@ -33,9 +33,9 @@
             </div>
         @endif
         <div class="container">
-            <div class="title m-b-md text-center mt-5">
-                Lybrarie Bookstore
-            </div>
+            <h3 class="m-b-md text-center mt-5">
+                Welcome to Lybrarie Bookstore
+            </h3>
             @if ($message = Session::get('danger'))
                 <div class="alert alert-danger bg-danger text-white alert-dismissible fade show" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
