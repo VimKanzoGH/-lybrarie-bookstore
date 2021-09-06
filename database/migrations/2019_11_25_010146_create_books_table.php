@@ -16,11 +16,12 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
 
-            $table->string('title', 250)->unique();
+            $table->string('title', 250)->unique()->index();
             $table->string('slug', 250)->unique();
-            $table->string('isbn', 250)->unique();
+            $table->mediumText('blurb');
+            $table->string('isbn', 250)->unique()->index();
             $table->float('price', 8, 2)->unsigned();
-            $table->string('published_date', 10)->nullable();
+            $table->string('published_date', 10)->nullable()->index();
             $table->boolean('publish')->default(0);
 
             $table->bigInteger('author_id')->unsigned();
@@ -32,11 +33,6 @@ class CreateBooksTable extends Migration
                     ->onDelete('cascade');
 
             $table->bigInteger('genre_id')->unsigned();
-            // $table->foreign('genre_id')
-            //         ->references('id')
-            //         ->on('genres')
-            //         ->onUpdate('cascade')
-            //         ->onDelete('cascade');
 
             $table->timestamps();
         });

@@ -1,32 +1,31 @@
-# BOOKSTORE
-> Simple e-commerce of books
+# LYBRARIE
 
-#
-
-> View [video demo project](https://youtu.be/rstvLyTOW-0)
+> Lybrarie is the city's favorite bookshop
 
 ## Made with
-- [php >= 7.3](https://www.php.net/)
-- [laravel 8.12](https://laravel.com)
-- [spatie/laravel-medialibrary 8.0.0](https://docs.spatie.be/laravel-medialibrary/v7/introduction/)
+
+-   [php >= 7.3](https://www.php.net/)
+-   [laravel 8.12](https://laravel.com)
+-   [spatie/laravel-medialibrary 8.0.0](https://docs.spatie.be/laravel-medialibrary/v7/introduction/)
 
 ## Features
-- Admin Panel (Users, Roles, Plans, Authors, Books)
-- User Wallet (user can buy credits)
-- User Library
+
+-   Admin Panel (Users, Roles, Plans, Genre, Authors, Books)
+-   User Library
 
 ## Installation
-- Check for requirements [laravel](https://laravel.com/docs/8.x/installation#server-requirements)
+
+-   Check for requirements [laravel](https://laravel.com/docs/8.x/installation#server-requirements)
 
 ```git
 # Clone this repository in your root folder
-git clone https://github.com/dcyar/bookstore.git 
+git clone
 
 # Install dependencies
 componser install
 
-# Navigate to the bookstore folder
-cd bookstore
+# Navigate to the lybrarie folder
+cd lybrarie
 
 # Create file .env
 cp .env.example .env
@@ -47,12 +46,8 @@ php artisan serve
 http://localhost:8000
 
 # Admin account
-homero@mail.com
+hi@epareto.com
 password
 ```
 
-
 #
-> Thanks for your visit.
-
-- Twitter: [@dcyar_](https://twitter.com/dcyar_)

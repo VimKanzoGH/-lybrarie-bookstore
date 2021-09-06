@@ -95,11 +95,21 @@
                                     </span>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <label for="blurb"><strong>Blurb:</strong></label>
+                                <div class="form-check ml-2">
+                                    <textarea name="blurb" id="blurb" class="form-control" rows="4" cols="200"></textarea>
+                                </div>
+                                @error('blurb')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                             <div class="form-group d-flex">
                                 <label for="publish"><strong>Publish:</strong></label>
                                 <div class="form-check ml-2">
                                     <input type="checkbox" class="form-check-input" value="1" name="publish" id="publish" />
-                                    {{-- <label class="form-check-label" for="exampleCheck1">Check me out</label> --}}
                                 </div>
                                 @error('publish')
                                     <span class="invalid-feedback" role="alert">
@@ -108,7 +118,7 @@
                                 @enderror
                             </div>
                             <hr />
-                            <button type="submit" class="btn btn-outline-primary btn-block">SAVE</button>
+                            <button type="submit" class="btn btn-outline-primary btn-block">Publish Book</button>
                         </form>
                     </div>
                 </div>
