@@ -10,8 +10,18 @@
 
 ## Features
 
--   Admin Panel (Users, Roles, Plans, Genre, Authors, Books)
+-   Admin Role (CRUD) [
+    Users,
+    Roles,
+    Plans,
+    Genre,
+    Authors,
+    Books
+    ]
 -   User Library
+-   Filter by Authors - Done
+-   Search by title, isbn Author - Partially Done
+-   Filter by Genre - Not Done
 
 ## Installation
 
