@@ -14,7 +14,7 @@ class AuthorsTableSeeder extends Seeder
     {
         $authors = [
             [
-                'name' => 'Fart ePareto'
+                'name' => 'Fath ePareto'
             ],
             [
                 'name' => 'Albert Ninyeh'
