@@ -12,7 +12,13 @@
                         <h5 class="card-title">{{ $book->title }} - <small
                                 class="price">${{ $book->price }}</small></h5>
                         <p class="card-text">
-                            <small class="text-muted">{{ $book->author->name }} - {{ $book->published_date }}</small>
+                            <a href="{{ route('author_book', $book->author->id) }}"
+                                class="text-muted">{{ $book->author->name }}
+                            </a> ||
+                            <a href="#" class="text-muted">
+                                {{ $book->published_date }}</a> ||
+                            <a href="#" class="text-muted">
+                                {{ $book->genre->name }}</a>
                         </p>
                     </div>
                     <div class="card-footer">

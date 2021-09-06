@@ -43,7 +43,6 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
         $book = Book::create($request->all());
 
         if ($request->cover) {

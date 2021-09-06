@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
+use App\Entities\Book;
+use App\Entities\Author;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,7 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function() {
-    $books = \App\Entities\Book::where('publish', 1)->latest()->get();
+    $books = Book::where('publish', 1)->latest()->get();
 
     $userBooks = Auth::check() ? auth()->user()->books()->pluck('book_id')->toArray() : [];
 
@@ -23,10 +25,14 @@ Route::get('/', function() {
 })->name('home');
 
 Route::get('/book/{slug}', function($slug) {
-    $book = \App\Entities\Book::where('slug', $slug)->first();
-
+    $book = Book::where('slug', $slug)->first();
     return view('book', compact('book'));
 })->name('book');
+
+Route::get('/books/author/{id}', function($slug) {
+    $authorBooks = Author::with('books')->get();
+    return view('author-books-listing', compact('authorBooks'));
+})->name('author_book');
 
 Route::view('about', 'about')->name('about');
 Route::view('contact', 'contact')->name('contact');

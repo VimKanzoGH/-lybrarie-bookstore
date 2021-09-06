@@ -33,7 +33,7 @@
             </div>
         @endif
         <div class="container">
-            <div class="title m-b-md text-center">
+            <div class="title m-b-md text-center mt-5">
                 Lybrarie Bookstore
             </div>
             @if ($message = Session::get('danger'))

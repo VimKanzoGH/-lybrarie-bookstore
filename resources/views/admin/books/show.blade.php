@@ -44,6 +44,10 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td><strong>Book Blurb</strong></td>
+                                    <td>{{ $book->blurb }}</td>
+                                </tr>
+                                <tr>
                                     <td><strong>Publish</strong></td>
                                     <td>
                                         @if ($book->publish)
